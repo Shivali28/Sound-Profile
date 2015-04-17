@@ -1,0 +1,69 @@
+import javax.microedition.lcdui.*;
+import javax.microedition.midlet.*;
+public class hello extends MIDlet implements CommandListener
+ {
+	
+		private Display dis;
+		private Form form;
+		private TextField tf1;
+		private StringItem stI;
+		private Command cmdq;
+		public void commandAction(Command command, Displayable d) {
+			// TODO Auto-generated method stub
+			if(command==cmdq){
+				notifyDestroyed();
+				return;			
+			}
+			cal();
+		}
+		public hello()
+		{
+			form=new Form("Calculation");
+			tf1=new TextField(null, "1230000", 8, TextField.NUMERIC);
+			//tf2=new TextField(null, "1230000", 8, TextField.NUMERIC);
+			stI=new StringItem("Result", null);
+			cmdq=new Command("Quit", Command.EXIT, 0);
+			//cmdp=new Command("Add", Command.SCREEN , 0);
+			
+			form.append(tf1);
+			//form.append(tf2);
+			form.append(stI);
+			//form.addCommand(cmdp);
+			form.addCommand(cmdq);
+			form.setCommandListener(this);
+		}
+		protected void destroyApp(boolean arg0) throws MIDletStateChangeException {
+			// TODO Auto-generated method stub
+			
+		}
+
+		protected void pauseApp() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		protected void startApp() throws MIDletStateChangeException {
+			// TODO Auto-generated method stub
+			dis=Display.getDisplay(this);
+			dis.setCurrent(form);
+			
+		}
+		protected void cal()
+		{
+			int n1,n2,result;
+			try {
+				n1=Integer.parseInt(tf1.getString());
+				//n2=Integer.parseInt(tf2.getString());
+				//result=n1 + n2;
+				stI.setText(n1+"");
+				
+			} catch (NumberFormatException e) {
+				// TODO: handle exception
+			}
+		}
+
+	}
+
+
+
+

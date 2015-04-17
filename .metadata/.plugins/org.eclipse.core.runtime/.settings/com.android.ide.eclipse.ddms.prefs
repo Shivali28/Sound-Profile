@@ -1,0 +1,11 @@
+ddms.logcat.auotmonitor.level=error
+ddms.logcat.automonitor.userprompt=true
+eclipse.preferences.version=1
+logcat.view.colsize.Application=143
+logcat.view.colsize.Level=29
+logcat.view.colsize.PID=50
+logcat.view.colsize.TID=50
+logcat.view.colsize.Tag=107
+logcat.view.colsize.Text=543
+logcat.view.colsize.Time=130
+logcat.view.filters.list=name\: 'HHrmin1', tag\: 'HRMIN1', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'HHRmin2', tag\: 'HRMIN2', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'dday', tag\: 'DAY', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'iiner', tag\: 'inner', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'oouter', tag\: 'outer', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'prof', tag\: 'pprofile', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'ssetprof', tag\: 'setprof', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'sitem', tag\: '', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'ttest', tag\: 'test', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'ddday', tag\: 'DDAY', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'sample', tag\: '', text\: '', pid\: '', app\: '', level\: 'verbose', 

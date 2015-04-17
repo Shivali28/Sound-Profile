@@ -1,0 +1,78 @@
+import javax.microedition.lcdui.*;
+import javax.microedition.midlet.*;
+
+import java.util.Date;
+import java.util.TimeZone;
+
+public class hello1 extends MIDlet implements CommandListener{
+
+
+	private Display dis;
+	private Form form;
+	//private TextField tf1;
+	private StringItem stI;
+	private Command cmdq;
+	private DateField calender;
+	Date date;
+	
+	
+	public void commandAction(Command command, Displayable d) {
+		// TODO Auto-generated method stub
+		if(command==cmdq){
+			notifyDestroyed();
+			return;			
+		}
+		cal();
+	}
+	public hello1()
+	{
+		form=new Form("Welcome");
+		
+		  
+		//tf1=new TextField(null, "Hello World", 8, TextField.NUMERIC);
+		
+		stI=new StringItem("Hello World", null);
+		cmdq=new Command("Quit", Command.EXIT, 0);
+		date=new Date();
+		//form.append(tf1);
+		String str="Hello World\n"+date.toString();
+		form.append(str);
+		form.append(calender);
+		form.addCommand(cmdq);
+		form.setCommandListener(this);
+	}
+	
+	
+		    
+	protected void destroyApp(boolean arg0) throws MIDletStateChangeException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void pauseApp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void startApp() throws MIDletStateChangeException {
+		// TODO Auto-generated method stub
+		dis=Display.getDisplay(this);
+		dis.setCurrent(form);
+		
+	}
+	protected void cal()
+	{
+		int n1;
+		try {
+			//n1=Integer.parseInt(tf1.getString());
+			
+			
+			stI.setText("");
+			
+		} catch (NumberFormatException e) {
+			// TODO: handle exception
+		}
+	}
+
+}
+

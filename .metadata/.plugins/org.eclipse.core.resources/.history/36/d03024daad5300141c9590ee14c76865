@@ -1,0 +1,38 @@
+package com.example.time;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+ 	   //get current date time with Date()
+ 	   Date date = new Date();
+ 	   System.out.println(dateFormat.format(date));
+  
+ 	   //get current date time with Calendar()
+ 	   Calendar cal = Calendar.getInstance();
+ 	   System.out.println(dateFormat.format(cal.getTime()));
+ 	   Toast.makeText(getApplicationContext(), "Date and Time Displayed", Toast.LENGTH_LONG);
+  
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}
